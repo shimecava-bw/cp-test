@@ -31,7 +31,7 @@
       '<div class="dsearch"><h4>キーワードで実績を探す</h4>'+
         '<form action="works.html" method="get"><input type="search" name="q" placeholder="例:バッグ、OEM"><button type="submit">検索</button></form></div>'+
     '</aside>'+
-    '<a class="fix-contact" href="contact.html" aria-label="お問い合わせ">'+'<svg class="fc-ring" viewBox="0 0 170 170" aria-hidden="true"><defs><path id="fcPath" d="M85,85 m-68,0 a68,68 0 1,1 136,0 a68,68 0 1,1 -136,0"/></defs>'+'<text><textPath href="#fcPath" textLength="425" lengthAdjust="spacing">CP JAPAN TRADING Co., Ltd. ・ CP JAPAN TRADING Co., Ltd. ・</textPath></text></svg>'+'<span class="fc-core">お問い<br>合わせ</span></a>';
+    '<a class="fix-contact" href="contact.html" aria-label="お問い合わせ">'+'<svg class="fc-ring" viewBox="0 0 150 150" aria-hidden="true"><defs><path id="fcPath" d="M75,75 m-64,0 a64,64 0 1,1 128,0 a64,64 0 1,1 -128,0"/></defs>'+'<text><textPath href="#fcPath" textLength="400" lengthAdjust="spacing">CP JAPAN TRADING Co., Ltd. ・</textPath></text></svg>'+'<span class="fc-core">お問い<br>合わせ</span></a>';
   }
   var ftEl = document.getElementById('ft');
   if(ftEl){
