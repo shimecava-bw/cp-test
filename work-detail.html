@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>実績詳細 | CP JAPAN TRADING</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="sub">
+<div id="hd"></div>
+
+<div class="crumb"><div class="wrap"><a href="index.html">ホーム</a> / <a href="works.html">実績一覧</a> / <span id="crumbTitle"></span></div></div>
+<main id="detail">
+<section class="dt-hd wrap"><h1 id="dtTitle"></h1><p id="dtClient"></p></section>
+<div class="wrap">
+  <div class="dt-main">
+    <div class="slider">
+      <div class="slide-view" id="slView"></div>
+      <button class="sl-btn prev" id="slPrev" aria-label="前へ">‹</button>
+      <button class="sl-btn next" id="slNext" aria-label="次へ">›</button>
+      <div class="dots" id="dots"></div>
+    </div>
+    <div>
+      <table class="spec">
+        <tr><th>製品名</th><td id="dtProd"></td></tr>
+        <tr><th>アイテム</th><td id="dtItem"></td></tr>
+        <tr><th>取引形態</th><td id="dtType"></td></tr>
+        <tr><th>素材・仕様</th><td id="dtMat"></td></tr>
+        <tr><th>内容</th><td>サイズ:ダミー<br>数量:ダミー<br>仕様:ダミー</td></tr>
+      </table>
+      <p class="dt-desc">製品の簡単な説明文が入ります。(ダミー)</p>
+    </div>
+  </div>
+  <div class="prod-strip"><span>プロジェクト全製品</span><ul id="prodStrip"></ul></div>
+  <div class="dt-body">
+    <div>
+      <h3>プロジェクト概要</h3>
+      <p>プロジェクトの背景・目的・製作したものの説明文が入ります。ここにはお客様の課題と、どのように形にしたかを数行で紹介します。(ダミーテキスト)</p>
+      <div class="tags">TAG <span id="dtTags"></span></div>
+    </div>
+    <div class="dt-side">
+      <a class="btn btn-fill" href="products.html" style="margin-bottom:14px">関連する商品ページへ</a>
+      <a class="btn" href="contact.html">お問い合わせ</a>
+    </div>
+  </div>
+  <a class="back" href="works.html">実績一覧へ戻る</a>
+  <div class="sec-hd" style="margin:60px 0 30px"><h2 style="font-size:22px">この事例と同様のプロジェクト</h2></div>
+  <div class="rel" id="rel" style="margin-bottom:100px"></div>
+</div>
+</main>
+<div id="ft"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

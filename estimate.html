@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>お見積りシミュレーター | CP JAPAN TRADING</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="sub">
+<div id="hd"></div>
+
+<div class="crumb"><div class="wrap"><a href="index.html">ホーム</a> / お見積りシミュレーター</div></div>
+<section class="page-hd"><span class="en">ESTIMATE</span><h1>お見積りシミュレーター</h1><p>商品の種類・数量・仕様を選ぶと、おおよその単価と納期の目安が表示されます。</p></section>
+<section class="sec" id="est">
+  <div class="wrap-narrow">
+    <ol class="steps"><li class="on">商品の種類</li><li>数量</li><li>仕様</li></ol>
+
+    <div class="st on"><div class="opts"><label class="opt"><input type="radio" name="cat" value="bag" checked><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>バッグ</span></label><label class="opt"><input type="radio" name="cat" value="kitchen"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>キッチン雑貨</span></label><label class="opt"><input type="radio" name="cat" value="stat"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>文具</span></label><label class="opt"><input type="radio" name="cat" value="toy"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>玩具</span></label><label class="opt"><input type="radio" name="cat" value="wood"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>木製品</span></label><label class="opt"><input type="radio" name="cat" value="resin"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>樹脂製品</span></label><label class="opt"><input type="radio" name="cat" value="metal"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>金属製品</span></label><label class="opt"><input type="radio" name="cat" value="eco"><span><span class="ph-box" style="display:block;aspect-ratio:1;width:100%" data-ph=""></span>サステナブル雑貨</span></label></div></div>
+
+    <div class="st"><p class="center" style="font-size:14px;color:var(--ink-sub)">ご希望の数量を選んでください。</p>
+      <div class="qty"><input type="range" id="qty" min="100" max="10000" step="100" value="1000"><output id="qtyOut">1,000<small>個</small></output></div></div>
+
+    <div class="st">
+      <h3 style="font-weight:400;font-size:15px;margin-bottom:12px">名入れ・ロゴ</h3>
+      <div class="opts" style="grid-template-columns:repeat(3,1fr);margin-bottom:34px">
+        <label class="opt"><input type="radio" name="print" value="0" checked><span>なし</span></label>
+        <label class="opt"><input type="radio" name="print" value="40"><span>1色印刷</span></label>
+        <label class="opt"><input type="radio" name="print" value="90"><span>フルカラー・刺繍など</span></label>
+      </div>
+      <h3 style="font-weight:400;font-size:15px;margin-bottom:12px">包装</h3>
+      <div class="opts" style="grid-template-columns:repeat(3,1fr)">
+        <label class="opt"><input type="radio" name="pack" value="0" checked><span>標準</span></label>
+        <label class="opt"><input type="radio" name="pack" value="25"><span>個包装</span></label>
+        <label class="opt"><input type="radio" name="pack" value="60"><span>オリジナルパッケージ</span></label>
+      </div>
+    </div>
+
+    <div class="st">
+      <div class="res">
+        <div><span>数量</span><b id="rQty"></b></div>
+        <div><span>納期の目安</span><b id="rDays"></b></div>
+        <div><span>単価の目安(税抜)</span><b id="rUnit"></b></div>
+        <div><span>合計の目安(税抜)</span><b id="rTotal"></b></div>
+      </div>
+      <p class="note">※ テストサイト用のダミー計算です。実際の金額・納期ではありません。</p>
+      <p class="center" style="margin-top:30px"><a class="btn btn-fill" href="contact.html">この内容で相談する</a></p>
+    </div>
+
+    <div class="est-nav">
+      <button class="btn" id="bk" type="button" style="min-width:140px">戻る</button>
+      <button class="btn btn-fill" id="nx" type="button" style="min-width:200px">次へ</button>
+      <button class="btn btn-fill" id="rs" type="button" style="min-width:200px;display:none">結果を見る</button>
+      <button class="btn" id="re" type="button" style="min-width:200px;display:none">やり直す</button>
+    </div>
+  </div>
+</section>
+<div id="ft"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

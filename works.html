@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>実績一覧 | CP JAPAN TRADING</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="sub">
+<div id="hd"></div>
+
+<div class="crumb"><div class="wrap"><a href="index.html">ホーム</a> / 実績一覧</div></div>
+<section class="page-hd"><span class="en">WORKS</span><h1>実績一覧</h1><p>企画から製造まで手がけた製品事例です。条件を選んで絞り込めます。(紹介文はダミー)</p></section>
+<section class="flt" id="finder">
+  <div class="wrap">
+    <div class="flt-box">
+      <div class="flt-top"><input id="fltQ" type="search" placeholder="キーワードで探す(取引先名・アイテムなど)"></div>
+      <div id="fltAxes"></div>
+      <div class="flt-bot"><span class="cnt">該当 <b id="cnt">0</b> 件</span><button id="fltClear" type="button">条件をクリア</button></div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding-top:60px;background:var(--gray);margin-top:-70px;padding-bottom:110px">
+  <div class="wrap">
+    <div class="mosaic" id="worksList"></div>
+    <p class="empty" id="empty">条件に合う実績が見つかりませんでした。条件を変えてお試しください。</p>
+  </div>
+</section>
+<div id="ft"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
