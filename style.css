@@ -57,8 +57,6 @@ body.open .drawer{transform:none}
 .dsearch button{padding:0 18px;background:var(--ink);color:#fff;font-size:13px}
 
 /* fixed contact */
-.fix-contact{position:fixed;right:20px;bottom:20px;z-index:40;background:var(--accent);color:#fff;padding:14px 26px;font-size:13px;letter-spacing:.14em;white-space:nowrap;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
-.fix-contact:hover{filter:brightness(1.08)}
 
 /* placeholder */
 .ph{background:var(--ph);color:#8b8b87;display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.14em;text-align:center;width:100%;height:100%;min-height:100%}
@@ -316,8 +314,7 @@ body.open .drawer{transform:none}
   .page-hd h1{font-size:22px;letter-spacing:.1em}
   .page-hd{padding:50px 0 44px}
   .sec-hd h2{font-size:22px}
-  .fix-contact{right:12px;bottom:12px;padding:10px 18px;font-size:12px}
-  .dt-hd h1{font-size:21px}
+    .dt-hd h1{font-size:21px}
 }
 
 /* トップ以外: 生成りを使わず薄いグレー(#fafafa)を主にする */
@@ -332,3 +329,14 @@ body:not(.top) .finder{background:#f1f1ef}
 body:not(.top) .finder h4{border-bottom-color:#dcdcd8}
 body:not(.top) .tabs button.on,body:not(.top) .steps li.on{border-color:var(--accent)}
 body:not(.top) .ph{background:#ebebe8;color:#8f8f8a}
+
+/* circular contact button */
+.fix-contact{position:fixed;right:20px;bottom:20px;z-index:40;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 4px 18px rgba(0,0,0,.14);display:block}
+.fc-ring{position:absolute;inset:0;width:100%;height:100%;animation:fcspin 14s linear infinite}
+.fc-ring text{font-family:var(--font-en);font-size:11px;font-weight:500;letter-spacing:.12em;fill:var(--ink)}
+.fc-core{position:absolute;left:50%;top:50%;width:59%;height:59%;transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;line-height:1.5;letter-spacing:.08em;transition:filter .3s}
+.fix-contact:hover .fc-ring{animation-play-state:paused}
+.fix-contact:hover .fc-core{filter:brightness(1.1)}
+@keyframes fcspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.fc-ring{animation:none}}
+@media (max-width:900px){.fix-contact{width:124px;height:124px;right:10px;bottom:10px}.fc-core{font-size:11px}}
