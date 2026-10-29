@@ -332,11 +332,11 @@ body:not(.top) .tabs button.on,body:not(.top) .steps li.on{border-color:var(--ac
 body:not(.top) .ph{background:#ebebe8;color:#8f8f8a}
 
 /* circular contact button */
-.fix-contact{position:fixed;right:20px;bottom:20px;z-index:40;width:150px;height:150px;display:block;transition:transform .2s}
+.fix-contact{position:fixed;right:20px;bottom:20px;z-index:40;width:118px;height:118px;display:block;transition:transform .2s}
 .fix-contact:hover{transform:scale(1.06)}
 .fc-ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:fcspin 14s linear infinite !important}
-.fc-ring text{font-family:var(--font-en);font-size:14px;font-weight:600;letter-spacing:.04em;fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
-.fc-core{position:absolute;left:50%;top:50%;width:73.333%;height:73.333%;transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;line-height:1.5;letter-spacing:.08em;box-shadow:0 6px 16px rgba(28,28,26,.22)}
+.fc-ring text{font-family:var(--font-en);font-size:10.5px;font-weight:400;letter-spacing:.04em;fill:var(--ink)}
+.fc-core{position:absolute;left:50%;top:50%;width:76.923%;height:76.923%;transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px;line-height:1.5;letter-spacing:.08em;box-shadow:0 6px 16px rgba(28,28,26,.22)}
 @keyframes fcspin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.fc-ring{animation:fcspin 14s linear infinite !important}}
-@media (max-width:900px){.fix-contact{width:124px;height:124px;right:10px;bottom:10px}.fc-core{font-size:12px}}
+@media (max-width:900px){.fix-contact{width:112px;height:112px;right:10px;bottom:10px}.fc-ring text{font-weight:500}.fc-core{font-size:14px}}
