@@ -8,6 +8,7 @@
     ["会社概要","COMPANY","company.html"],
     ["お問い合わせ","CONTACT","contact.html"]
   ];
+  function pic(src,alt){ return '<img class="ph" src="'+src+'" alt="'+(alt||'')+'">'; }
   function ph(t){ return '<div class="ph">'+(t||'ここに画像が入ります')+'</div>'; }
   window.PH = ph;
 
@@ -59,7 +60,7 @@
 
   /* ---------- mosaic render (top / works) ---------- */
   function tileHTML(w,cls){
-    return '<a class="tile ph-box '+cls+'" href="work-detail.html?id='+w.id+'">'+ph()+'<figcaption>'+w.client+'</figcaption></a>';
+    return '<a class="tile ph-box '+cls+'" href="work-detail.html?id='+w.id+'">'+(w.img?pic(w.img,w.title):ph())+'<figcaption>'+w.client+'</figcaption></a>';
   }
   function sizeClass(i){ var r=i%7; return r===0?'w2 h2':(r===4?'w2':''); }
 
@@ -129,7 +130,8 @@
     document.getElementById('dtTitle').textContent = w.title;
     document.getElementById('dtClient').textContent = w.client;
     document.getElementById('crumbTitle').textContent = w.title;
-    document.getElementById('dtProd').textContent = '製品名(ダミー)';
+    document.getElementById('dtProd').textContent = w.prod || '製品名(ダミー)';
+    if(w.spec){ document.getElementById('dtSpec').innerHTML = w.spec; }
     document.getElementById('dtType').textContent = w.type.join(' / ');
     document.getElementById('dtMat').textContent = w.mat.join(' / ');
     document.getElementById('dtItem').textContent = w.item.join(' / ');
@@ -137,7 +139,7 @@
       .map(function(t){return '<a href="works.html?'+t[0]+'='+encodeURIComponent(t[1])+'#finder">'+t[1]+'</a>';}).join('');
     // slider
     var n=5, cur=0, view=document.getElementById('slView'), dots=document.getElementById('dots');
-    view.innerHTML = Array.apply(null,Array(n)).map(function(_,i){return '<div class="ph'+(i===0?' on':'')+'">ここに画像が入ります ('+(i+1)+'/'+n+')</div>';}).join('');
+    view.innerHTML = Array.apply(null,Array(n)).map(function(_,i){return w.img ? '<img class="ph'+(i===0?' on':'')+'" src="'+w.img+'" alt="'+w.title+'">' : '<div class="ph'+(i===0?' on':'')+'">ここに画像が入ります ('+(i+1)+'/'+n+')</div>';}).join('');
     dots.innerHTML = Array.apply(null,Array(n)).map(function(_,i){return '<i class="'+(i===0?'on':'')+'" data-i="'+i+'"></i>';}).join('');
     function go(i){ cur=(i+n)%n; view.querySelectorAll('.ph').forEach(function(e,j){e.classList.toggle('on',j===cur);}); dots.querySelectorAll('i').forEach(function(e,j){e.classList.toggle('on',j===cur);}); }
     document.getElementById('slPrev').onclick=function(){go(cur-1)};
@@ -149,7 +151,7 @@
       return '<a href="work-detail.html?id='+r.id+'"><span class="ph-box">'+ph('')+'</span><span>'+r.client+' /<br>'+r.title+'</span></a>';
     }).join('');
     var ps = document.getElementById('prodStrip');
-    ps.innerHTML = [1,2,3,4,5].map(function(i){return '<li class="ph-box'+(i===1?' on':'')+'">'+ph('')+'</li>';}).join('');
+    ps.innerHTML = [1,2,3,4,5].map(function(i){return '<li class="ph-box">'+(w.strip?pic(w.strip[i-1],''):ph(''))+'</li>';}).join('');
   }
 
   /* ---------- products tabs ---------- */

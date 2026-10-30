@@ -6,7 +6,11 @@ var AXES = {
 };
 
 var WORKS = [
-  { id:1,  client:"取引先名A 様", title:"オリジナルバッグ(案件名ダミー)",   item:["バッグ"],               type:["OEM"],          mat:["紙・布"] },
+  { id:1,  client:"取引先名A 様", title:"NUNOGAMI A4トートバッグ(マチあり)",   item:["バッグ"],               type:["OEM"],          mat:["紙・布"],
+    img:"images/work01-main.jpg",
+    prod:"A4 トートバッグ(マチあり)",
+    spec:"サイズ: L225 x H350 x D120mm<br>生地厚: 0.55mm<br>取っ手: ポリコットン<br>ロゴ: 1C・4C対応可能<br>MOQ: 100枚",
+    strip:["images/work01-p1.jpg","images/work01-p2.jpg","images/work01-p3.jpg","images/work01-p4.jpg","images/work01-p5.jpg"] },
   { id:2,  client:"取引先名B 様", title:"キッチン雑貨セット(案件名ダミー)", item:["キッチン雑貨"],         type:["OEM","ODM"],    mat:["木","樹脂"] },
   { id:3,  client:"取引先名C 様", title:"ノベルティ文具(案件名ダミー)",     item:["文具"],                 type:["販促品"],       mat:["紙・布"] },
   { id:4,  client:"取引先名D 様", title:"コンクリート雑貨(案件名ダミー)",   item:["バスルーム雑貨"],       type:["PBブランド"],   mat:["コンクリート"] },
